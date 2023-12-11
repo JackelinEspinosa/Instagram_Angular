@@ -1,0 +1,13 @@
+<!-- reels.component.html -->
+
+<div class="reels-container">
+    <h2>Reels</h2>
+    <div *ngFor="let reel of reelsData" class="reel-item">
+      <video #videoPlayer controls>
+        <source [src]="getVideoUrl(reel.id)" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+      <p>{{ reel.description }}</p>
+      <button (click)="togglePlayback(videoPlayer)">Reproducir/Pausar</button>
+    </div>
+  </div>

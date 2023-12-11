@@ -1,0 +1,18 @@
+<!-- search.component.html -->
+
+<form (ngSubmit)="search()">
+  <div class="search-container">
+    <input type="text" placeholder="Buscar por nombre" [(ngModel)]="searchTerm" name="searchTerm" />
+    <button type="submit">Buscar</button>
+  </div>
+</form>
+
+<div class="search-results">
+  <!-- Mostrar imágenes dinámicas aquí -->
+  <div *ngFor="let result of searchResults" class="result-item">
+    <div class="circle-image">
+      <img [src]="result.imageUrl" alt="{{ result.name }}" />
+    </div>
+    <p>{{ result.name }}</p>
+  </div>
+</div>
