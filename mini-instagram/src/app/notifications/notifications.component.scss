@@ -1,0 +1,36 @@
+.notifications {
+    padding: 20px;
+  
+    .notification-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+  
+      .notification-content {
+        margin-left: 12px;
+  
+        p {
+          margin: 0;
+        }
+  
+        .sender-name {
+          font-weight: bold;
+          margin-right: 8px;
+        }
+  
+        .notification-time {
+          font-size: 0.8rem;
+          color: gray;
+        }
+      }
+  
+      // Estilo para la imagen del perfil
+      img {
+        width: 40px; 
+        height: 40px;
+        border-radius: 50%; 
+        object-fit: cover;
+      }
+    }
+  }
+  
